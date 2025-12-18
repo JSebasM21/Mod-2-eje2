@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gallery - Galería Futurista</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Efecto de partículas -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-camera"></i> Nexus Gallery</h1>
+            <p>Explora nuestra colección futurista con tecnología avanzada de visualización</p>
+        </header>
+
+        <!-- Controles -->
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar imágenes por título o descripción...">
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i> Todas
+                </button>
+                <button class="filter-btn" data-filter="naturaleza">
+                    <i class="fas fa-mountain"></i> Naturaleza
+                </button>
+                <button class="filter-btn" data-filter="ciudad">
+                    <i class="fas fa-city"></i> Ciudad
+                </button>
+                <button class="filter-btn" data-filter="tecnologia">
+                    <i class="fas fa-microchip"></i> Tecnología
+                </button>
+                <button class="filter-btn" data-filter="personas">
+                    <i class="fas fa-user-group"></i> Personas
+                </button>
+            </div>
+
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-grid"></i> Grid
+                </button>
+                <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i> Lista
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <span>Mostrando <strong id="imageCount">0</strong> imágenes</span>
+            <span><i class="fas fa-sync-alt"></i> Actualizado en tiempo real</span>
+        </div>
+
+        <!-- Galería -->
+        <div class="gallery" id="gallery">
+            <!-- Las imágenes se cargarán con JavaScript -->
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightboxImg">
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxCategory"></p>
+                    <p id="lightboxDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
